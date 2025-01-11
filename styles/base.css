@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #3a6ea5;
+    color: #ffffff;
+    padding: 1em 0;
+	align-items: center;
+	justify-content: center;
+    text-align: center;
+}
+
+header,
+main {
+	margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header span {
+    color: #ffd60a;
+}
+
+nav {
+    background-color: #36454f;
+    margin-top: 1rem;
+    padding: 2rem;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration:overline;
+}
+
+main {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card h2 {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.profile {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.profile img {
+    max-width: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.location {
+    padding-top: 1.5rem ;
+}
+
+.location-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.location img {
+    max-width: 150px;
+    margin-top: 0.5em;
+    flex-shrink: 0;
+}
+
+.resources {
+    border: 1px solid #ddd;
+    padding: 1em;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resources li {
+    margin: 0.5em 0;
+}
+
+.resources a {
+    text-decoration: none;
+    color: #003366;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+    font-size: 0.9em;
+}
+
+
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}
