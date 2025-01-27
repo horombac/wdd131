@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Country</title>
+    <meta name="description" content="Visit Zimbabwe with rich history, nature, people, and natural recourse. This is Collin's work at BYUI wed development course.">
+    <meta name="author" content="Collin Horomba">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+</head>
+<body>
+    <header>
+        <h1>ZIMBABWE</h1>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/zimbabwe-image.webp" media="(min-width: 1000px)">
+                <img src="images/zimbabwe-image.webp" alt="Zimbabwe victoria falls" width="500" height="250">
+            </picture>
+        </div>
+
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li>Area: <span>399 757 km²</span></li>
+                <li>Population: <span>16 670 000</span></li>
+                <li>Capital: <span>Harare</span></li>
+                <li>Languages: <span>Shona, Ndebele, English</span></li>
+                <li>Currency: <span>Zimbabwe Dollar</span></li>
+                <li>Time Zone: <span>GMT+2</span></li>
+                <li>Calling Code: <span>+263</span></li>
+                <li>Internet TLD: <span>.zw</span></li>
+            </ul>
+        </section>
+
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-icon">
+                <img src="images/weather-icon.svg" alt="Thunderstorm">
+            </div>
+            <ul>
+                <li>Temperature: <span>10°C</span></li>
+                <li>Conditions: <span>Thunderstorm</span></li>
+                <li>Wind: <span>5 km/h</span></li>
+                <li>Wind Chill: <span id="wind-chill">9.8°C</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Collin Horomba - Harare, Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getdates.js"></script>
+    <script src="scripts/place.js"></script>
+</body>
+</html>
