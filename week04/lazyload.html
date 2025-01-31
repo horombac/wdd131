@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading | Collin Horomba 2025 - Web Fundamentals - BYUI</title>
+    <meta name="description" content="Collin Horomba web fundamentals course as I will demonstrate lazy loading of an image on a web page.">
+    <meta name="author" content="Collin S. Horomba">
+    <link rel="stylesheet" href="styles/lazyload.css">
+</head>
+<body>
+    <header>
+        <h1>Lazy Loading</h1>
+    </header>
+    <main>
+        <picture>
+            <img src="images/lazyload01.jpg" alt="place holder demo" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/lazyload02.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/lazyload03.jpg" alt="Placeholder" loading="lazy"  width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/lazyload04.jpg" alt="Placeholder" loading="lazy"  width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/lazyload05.jpg" alt="Placeholder" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/lazyload06.jpg" alt="Placeholder" loading="lazy"  width="400" height="600">
+        </picture>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Collin Horomba - Harare, Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/lazyload.js"></script>
+</body>
+</html>
