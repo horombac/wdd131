@@ -1,0 +1,41 @@
+/* Default (small screens) */
+.gallery {
+    display: block;
+    text-align: center;
+  }
+  
+  .temple-card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+  }
+  
+  .temple-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  /* Large screens (grid layout) */
+  @media (min-width: 768px) {
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+  
+    .temple-card {
+      width: 100%;
+      margin: 0;
+    }
+
+    .active {
+        color: red;
+    }
+  }
+  
