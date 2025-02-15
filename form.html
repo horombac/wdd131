@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="This is a web foarm where people can use to review the products that we are selling.">
+    <meta name="author" content="Collin S. Horomba">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form action="review.html" method="get" class="wf1">
+            <fieldset>
+                <legend>Product Name</legend>
+                <label>
+                    <select id="productName" name="productName" required>
+                        <option value="" disabled selected>Select a Product...</option>
+                    </select>
+                </label>
+                
+            </fieldset>
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label>
+                    &#9733;
+                    <input type="radio" name="rating" value="1">
+                </label>
+                <label>
+                    &#9733;&#9733;
+                    <input type="radio" name="rating" value="2">
+                </label>
+                <label>
+                    &#9733;&#9733;&#9733;
+                    <input type="radio" name="rating" value="3">
+                </label>
+                <label>
+                    &#9733;&#9733;&#9733;&#9733;
+                    <input type="radio" name="rating" value="4">
+                </label>
+                <label>
+                    &#9733;&#9733;&#9733;&#9733;&#9733;
+                    <input type="radio" name="rating" value="5">
+                </label>
+            </fieldset>
+            <fieldset>
+                <label for="installationDate">Date of Installation: <input type="date" id="installationDate" name="installationDate" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Useful Features</legend>
+                <p>Which feautures did you find useful in the product?</p>
+                <i>(Check All That Apply)</i>
+                <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+                <label><input type="checkbox" id="easeOfUse" name="features" value="Easy Of Use"> Ease Of Use</label>
+                <label><input type="checkbox" id="performance" name="features" value="Performance"> Perfomance</label>
+                <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+            </fieldset>
+
+            <fieldset>
+                <label for="">Your name* <input type="text" id="userName" name="fname" placeholder="Your Fullname" required></label>
+                <label>Written Review (Optional): <textarea name="writtenReview" id="writtenReview" placeholder="Message"></textarea></label>
+            </fieldset>
+
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Collin Horomba - Harare, Zimbabwe</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>
