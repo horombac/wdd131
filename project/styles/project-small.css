@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('/wdd131/project/images/foam.webp') no-repeat center center/cover;
+    
+}
+
+
+
+/* Lazy load background using a pseudo-element */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/wdd131/project/images/foam.webp'); /* Your actual background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: -1;
+}
+
+/* Once the page loads, reveal the background */
+body.loaded::before {
+    opacity: 1;
+}
+
+
+header {
+    background-color: white;
+    color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: #666;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {border-bottom: solid 1px #333;}
+nav ul li a {
+    display: block;
+    background-color: skyblue;
+    color: black;
+    padding: .5rem 0;
+    text-decoration: none;
+    font-size: .9rem;
+    text-align: center;
+}
+nav ul li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
+nav ul li a:hover {
+    background-color: #002244;
+    color: whitesmoke;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    color: black;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: url('/wdd131/project/images/background-image.webp') no-repeat center center/cover;
+    color: black;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    max-width: 50%;
+    padding: 2rem;
+}
+
+.hero-text {
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    color: white; /* Ensure text is readable */
+    border-radius: 10px; /* Smooth edges */
+    text-align: center; /* Prevent*/
+}
+
+.hero-text h2 {
+    font-size: 20px;
+    padding: 1rem;
+    line-height: 1.8;
+}
+
+.hero-text p {
+    padding: 1rem;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.whatsapp-button {
+    margin-top: 20px;
+    background-color: #25D366;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    display: inline-block;
+}
+
+
+
+.info {
+    background-color: whitesmoke;
+    padding: 1.5rem;
+}
+
+.info h2 {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    
+}
+
+.about iframe {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+ .button {
+    justify-content: center;
+    text-align: center;
+   
+}
+
+.info .about p{
+    text-align: center;
+    padding: 1.5rem;
+    line-height: 1.8;
+    
+}
+
+.about div a {
+    display: block;
+    background-color: #25D366;
+    color: black;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+
+
+
+
+footer {
+    background-color: white;
+    color: #000;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer p {
+    padding: 1.5rem;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hero {
+        justify-content: center;
+    }
+
+   .hero-text {
+        text-align: center;
+        padding: 2rem;
+        max-width: 250px;
+   }
+
+   .about div a {
+    padding: .5rem;
+   }
+    
+}
+
+
+/* 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 64rem) {
+
+    header, nav, main, footer {
+        max-width: 64rem;
+        margin:auto;
+    }
+
+/*----------- BODY --------------*/
+.hero-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+
+/*----------- HEADER --------------*/
+.visit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+
+
+.about div a {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+}
+/*----------- NAVIGATION --------------*/
+
+
+
+/*----------- MAIN --------------*/
+
+
+
+/*----------- FOOTER --------------*/
+    
+}
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+  
+
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}
