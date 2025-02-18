@@ -6,7 +6,11 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: url('/wdd131/project/images/foam.webp') no-repeat center center/cover;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease;
     
 }
 
@@ -194,6 +198,27 @@ nav ul li a:hover {
 }
 
 
+.gallery {
+    display: block;
+    text-align: center;
+}
+
+.service-card {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
 
 
 
@@ -248,6 +273,10 @@ footer p {
    .about div a {
     padding: .5rem;
    }
+
+   main .gallery {
+    display: block;
+   }
     
 }
 
@@ -292,7 +321,13 @@ footer p {
 }
 /*----------- NAVIGATION --------------*/
 
-
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    height: auto;
+}
 
 /*----------- MAIN --------------*/
 

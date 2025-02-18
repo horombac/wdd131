@@ -18,9 +18,19 @@ document.getElementById("contact-form").addEventListener("submit", function(even
     alert("Your message has been sent!");
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.body.classList.add("loaded"); // Adds the class when content is ready
-});
+
+document.addEventListener('DOMContentLoaded', function(){
+    const body = document.body;
+    const img = new Image();
+
+    img.onload = function() {
+        body.stylebackgroundImage = 'url(${this.src})';
+    };
+
+    setTimeout(() => {
+        img.src = '/wdd131/project/images/foam.webp';
+    }, 1000);
+})
 
 
 
