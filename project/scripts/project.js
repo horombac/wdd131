@@ -33,6 +33,10 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 
+document.getElementById('name-display').textContent = new URLSearchParams(window.location.search).get('name');
+        document.getElementById('email-display').textContent = new URLSearchParams(window.location.search).get('email');
+        document.getElementById('message-display').textContent = new URLSearchParams(window.location.search).get('message');
+
 
 
 

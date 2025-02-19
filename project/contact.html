@@ -5,39 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - The Laundry Lounge</title>
     <link rel="stylesheet" href="../project/styles/project-small.css">
+    <link rel="stylesheet" href="../project/styles/contact.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">The Laundry Lounge</div>
-            <button class="menu-toggle">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <h1 class="logo"><a href="/wdd131/project/index.html">The Laundry Lounge</a></h1>
+        <button class="hamburger" id="hamburger">&#9776;</button>
+   </header>
+   <nav>
+        <ul id="nav-menu">
+            <li><a title="Home" class="active" href="/wdd131/project/index.html">Home</a></li>
+            <li><a title="Services" href="/wdd131/project/service.html">Services</a></li>
+            <li><a title="Contact Us" href="/wdd131/project/contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section class="contact">
-        <h1>Contact Us</h1>
-        <p>Book your laundry service via WhatsApp:</p>
-        <a href="https://wa.me/your-number" class="btn">WhatsApp Us</a>
-
-        <h2>Or send us a message:</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <p>Book your laundry service via WhatsApp:</p>
+            <a href="https://wa.me/your-number" class="btn">WhatsApp Us</a>
+    
+            <h2>Or send us a message:</h2>
+            <form action="thankyou.html" method="get" id="contact-form">
+                <label for="name">Name*:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email*:</label>
+                <input type="email" id="email" name="email" required>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" required></textarea>
-
-            <button type="submit" class="btn">Send</button>
-        </form>
-    </section>
+                <label for="message">Message*:</label>
+                <textarea id="message" name="message" required></textarea>
+            
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 The Laundry Lounge. All rights reserved.</p>
