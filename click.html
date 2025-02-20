@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Laundry Lounge</title>
+    <style>
+        /* CSS goes here */
+        @media screen and (max-width: 768px) {
+            #nav-menu {
+                display: none;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+        }
+
+        #nav-menu.show-nav {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href="/wdd131/project/index.html">The Laundry Lounge</a></h1>
+        <button class="hamburger" id="hamburger">☰</button>
+    </header>
+    <nav>
+        <ul id="nav-menu">
+            <li><a title="Home" class="active" href="/wdd131/project/index.html">Home</a></li>
+            <li><a title="Services" href="/wdd131/project/service.html">Services</a></li>
+            <li><a title="Contact Us" href="/wdd131/project/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <script>
+        // JavaScript goes here
+        document.getElementById('hamburger').addEventListener('click', function() {
+            console.log('Hamburger clicked'); // Check if this logs when you click
+            var navMenu = document.getElementById('nav-menu');
+            if (navMenu.style.display === "none" || navMenu.style.display === "") {
+                navMenu.style.display = "block";
+            } else {
+                navMenu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
